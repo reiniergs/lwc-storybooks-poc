@@ -1,4 +1,5 @@
 import { LightningElement, api } from 'lwc';
+import classnames from 'classnames';
 
 /**
  * Represents a label which holds a small amount of information, such as the
@@ -13,7 +14,12 @@ export default class LightningBadge extends LightningElement {
      */
     @api label;
 
-    connectedCallback() {
-        this.classList.add('slds-badge');
+    @api variant = 'default';
+
+    get computedClass() {
+        return classnames('slds-badge', {
+            'slds-badge_inverse': this.variant === 'inverse',
+            'slds-badge_lightest': this.variant === 'lightest',
+        });
     }
 }

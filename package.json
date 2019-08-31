@@ -19,7 +19,8 @@
     "webpack-cli": "^3.3.7"
   },
   "dependencies": {
-    "@salesforce-ux/design-system": "3.0.0-alpha-5"
+    "@salesforce-ux/design-system": "3.0.0-alpha-5",
+    "classnames": "^2.2.6"
   },
   "scripts": {
     "storybook": "start-storybook -s ./static -p 6006",
