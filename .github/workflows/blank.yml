@@ -1,0 +1,14 @@
+name: Deploy to Gh-Pages
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: ./.github/actions/deploy-gh-pages
+    - name: Deploying to Gh-Pages
+     
+   
