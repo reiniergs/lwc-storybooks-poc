@@ -38,6 +38,7 @@
 
 .slds-button:disabled {
     color: #dddbda;
+    cursor: default;
 }
 
 .slds-button:disabled * {
@@ -69,7 +70,6 @@
 
 .slds-button_neutral:disabled {
     background-color: white;
-    cursor: default;
 }
 
 .slds-button_brand {
