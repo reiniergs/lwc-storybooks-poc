@@ -9,6 +9,8 @@
     "@babel/core": "^7.5.5",
     "@lwc/compiler": "^1.0.0",
     "@lwc/engine": "^1.0.0",
+    "@storybook/addon-knobs": "^5.1.11",
+    "@storybook/addons": "^5.1.11",
     "@storybook/html": "^5.1.11",
     "@types/node": "^12.0.1",
     "@types/webpack": "^4.4.31",
