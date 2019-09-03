@@ -11,11 +11,11 @@ module.exports = async ({ config, mode }) => {
             }
         })
     );
-    config.module.rules = [];
-    config.module.rules.push({
+    config.module.rules = [{
         test: /\.stories\.js$/,
         loaders: [require.resolve('@storybook/addon-storysource/loader')],
         enforce: 'pre',
-    });
+    }];
+    
     return config;
 };
