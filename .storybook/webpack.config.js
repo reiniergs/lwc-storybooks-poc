@@ -10,7 +10,12 @@ module.exports = async ({ config, mode }) => {
                 wrappers: path.resolve('./stories/wrappers')
             }
         })
-    )
-    config.module.rules = [];
+    );
+    config.module.rules = [{
+        test: /\.stories\.js$/,
+        loaders: [require.resolve('@storybook/addon-storysource/loader')],
+        enforce: 'pre',
+    }];
+    
     return config;
 };
