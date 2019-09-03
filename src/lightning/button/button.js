@@ -1,7 +1,7 @@
 import { LightningElement, api } from 'lwc';
 import classnames from 'classnames'
 
-export default class LightningBadge extends LightningElement {
+export default class LightningButton extends LightningElement {
     @api label;
 
     @api disabled;
