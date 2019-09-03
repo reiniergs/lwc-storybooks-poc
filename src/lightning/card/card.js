@@ -5,10 +5,9 @@ export default class LightningCard extends LightningElement {
 
     renderedCallback() {
         const footerWrapper = this.template.querySelector('.slds-card__footer');
-        const noFooterContent = this.template.querySelector(
-            'slot[name="footer"] [data-id="default-content"]'
-        );
-        if (noFooterContent) {
+        const hasFooterContent = this.querySelector('[slot="footer"]');
+        
+        if (!hasFooterContent) {
             if (footerWrapper.remove) {
                 footerWrapper.remove();
             } else if (footerWrapper.parentNode) {
