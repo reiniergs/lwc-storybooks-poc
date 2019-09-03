@@ -6,7 +6,8 @@ module.exports = async ({ config, mode }) => {
         new LWCWebpackPlugin({
             namespace: {
                 // LWC Namespace with path
-                lightning: path.resolve('./src/lightning')
+                lightning: path.resolve('./src/lightning'),
+                wrappers: path.resolve('./stories/wrappers')
             }
         })
     )
