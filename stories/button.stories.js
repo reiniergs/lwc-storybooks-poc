@@ -1,17 +1,16 @@
 import { storiesOf } from '@storybook/html';
-import { createElement } from '@lwc/engine';
+import { buildCustomElementConstructor, createElement } from '@lwc/engine';
 import { withKnobs, boolean, text } from '@storybook/addon-knobs';
 import Button from 'lightning/button';
 
+const buttonCustomElement = buildCustomElementConstructor(Button);
+customElements.define('lightning-button', buttonCustomElement); 
+
 storiesOf('Button', module)
     .addDecorator(withKnobs)
-    .add('base', () => {
-        const button = createElement('lightning-button', { is: Button });
-        button.label = text('label', 'Base Button');
-        button.disabled = boolean('disabled', false);
-        button.addEventListener('click', () => alert('base button clicked'));
-        return button;
-    })
+    .add('base', () => `
+        <lightning-button label="Base Button"><lightning-button>
+    `)
     .add('neutral', () => {
         const button = createElement('lightning-button', { is: Button });
         button.label = text('label', 'Neutral Button');

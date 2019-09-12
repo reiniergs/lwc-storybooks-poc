@@ -1,25 +1,17 @@
-import { document, console } from 'global';
 import { storiesOf } from '@storybook/html';
-import { createElement } from '@lwc/engine';
-import { withKnobs, text } from '@storybook/addon-knobs';
+import { buildCustomElementConstructor } from '@lwc/engine';
 import Badge from 'lightning/badge';
 
+const BadgeCustomElement = buildCustomElementConstructor(Badge);
+customElements.define('lightning-badge', BadgeCustomElement)
+
 storiesOf('Badge', module)
-    .addDecorator(withKnobs)
-    .add('default', () => {
-        const badge = createElement('lightning-badge', { is: Badge });
-        badge.label = text('label', 'Default Badge');
-        return badge;
-    })
-    .add('inverse', () => {
-        const badge = createElement('lightning-badge', { is: Badge });
-        badge.label = text('label', 'Inverse Badge');
-        badge.variant = 'inverse';
-        return badge;
-    })
-    .add('lightest', () => {
-        const badge = createElement('lightning-badge', { is: Badge });
-        badge.label = text('label', 'Lightest Badge');
-        badge.variant = 'lightest';
-        return badge;
-    });
+    .add('default', () => `
+        <lightning-badge label="Default"><lightning-badge>
+    `)
+    .add('inverse', () => `
+        <lightning-badge variant="inverse" label="Inverse"><lightning-badge>
+    `)
+    .add('lightest', () => `
+        <lightning-badge variant="lightest" label="Lightest"><lightning-badge>
+    `);
