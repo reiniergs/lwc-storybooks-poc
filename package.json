@@ -1,35 +1,35 @@
 {
-  "name": "lwc-storybooks-poc",
-  "version": "1.0.0",
-  "description": "PoC of LWC project using storybooks",
-  "main": "index.js",
-  "author": "Reinier Guerra <reinier.guerra@salesforce.com>",
-  "license": "MIT",
-  "devDependencies": {
-    "@babel/core": "^7.5.5",
-    "@lwc/compiler": "^1.0.0",
-    "@lwc/engine": "^1.0.0",
-    "@storybook/addon-knobs": "^5.1.11",
-    "@storybook/addon-storysource": "^5.1.11",
-    "@storybook/addons": "^5.1.11",
-    "@storybook/html": "^5.1.11",
-    "@types/node": "^12.0.1",
-    "@types/webpack": "^4.4.31",
-    "babel-loader": "^8.0.6",
-    "typescript": "^3.4.5",
-    "webpack": "^4.39.3",
-    "webpack-cli": "^3.3.7"
-  },
-  "dependencies": {
-    "@salesforce-ux/design-system": "3.0.0-alpha-5",
-    "classnames": "^2.2.6",
-    "lwc-webpack-plugin": "davidturissini/lwc-webpack-plugin#pull/1/head"
-  },
-  "scripts": {
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "build-plugin": "cd node_modules/lwc-webpack-plugin && yarn build",
-    "hack-slds": "node hack-slds-imports.js",
-    "postinstall": "yarn build-plugin && yarn hack-slds"
-  }
+    "name": "lwc-storybooks-poc",
+    "version": "1.0.0",
+    "description": "PoC of LWC project using storybooks",
+    "main": "index.js",
+    "author": "Reinier Guerra <reinier.guerra@salesforce.com>",
+    "license": "MIT",
+    "devDependencies": {
+        "@babel/core": "^7.5.5",
+        "@lwc/compiler": "^1.0.0",
+        "@lwc/engine": "^1.0.0",
+        "@storybook/addon-knobs": "^5.1.11",
+        "@storybook/addon-storysource": "^5.1.11",
+        "@storybook/addons": "^5.1.11",
+        "@storybook/html": "^5.2.1",
+        "@types/node": "^12.0.1",
+        "@types/webpack": "^4.4.31",
+        "babel-loader": "^8.0.6",
+        "typescript": "^3.4.5",
+        "webpack": "^4.39.3",
+        "webpack-cli": "^3.3.7"
+    },
+    "dependencies": {
+        "@salesforce-ux/design-system": "3.0.0-alpha-5",
+        "classnames": "^2.2.6",
+        "lwc-webpack-plugin": "davidturissini/lwc-webpack-plugin#pull/1/head"
+    },
+    "scripts": {
+        "storybook": "start-storybook -p 6006",
+        "build-storybook": "build-storybook",
+        "build-plugin": "cd node_modules/lwc-webpack-plugin && yarn build",
+        "hack-slds": "node hack-slds-imports.js",
+        "postinstall": "yarn build-plugin && yarn hack-slds"
+    }
 }
