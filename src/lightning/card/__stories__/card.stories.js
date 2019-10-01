@@ -1,9 +1,4 @@
 import { document } from 'global';
-import { buildCustomElementConstructor } from '@lwc/engine';
-import Card from 'lightning/card';
-
-const cardCustomElement = buildCustomElementConstructor(Card);
-customElements.define('lightning-card', cardCustomElement);
 
 export default {
   title: 'Card'
