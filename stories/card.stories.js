@@ -1,12 +1,17 @@
-import { storiesOf } from '@storybook/html';
+import { document } from 'global';
 import { buildCustomElementConstructor } from '@lwc/engine';
 import Card from 'lightning/card';
 
 const cardCustomElement = buildCustomElementConstructor(Card);
-customElements.define('lightning-card', cardCustomElement); 
+customElements.define('lightning-card', cardCustomElement);
 
-storiesOf('Card', module)
-    .add('basic', () => `
+export default {
+    title: 'Card'
+};
+
+export const basic = () => {
+    const div = document.createElement('div');
+    div.innerHTML = `
         <div class="slds-p-around_medium">
             <lightning-card title="Accounts">
                 <lightning-button
@@ -17,5 +22,7 @@ storiesOf('Card', module)
                 <p style="padding: 0 1rem">Anything can go into the card body</p>
                 <span slot="footer">View All</span>
             </lightning-card>
-        <div class="slds-p-around_medium">    
-    `);
+        <div class="slds-p-around_medium">
+    `;
+    return div;
+};
