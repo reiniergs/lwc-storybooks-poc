@@ -6,13 +6,13 @@ const cardCustomElement = buildCustomElementConstructor(Card);
 customElements.define('lightning-card', cardCustomElement);
 
 export default {
-    title: 'Card'
+  title: 'Card'
 };
 
 export const basic = () => {
-    const div = document.createElement('div');
-    div.className = 'slds-p-around_medium';
-    div.innerHTML = `
+  const div = document.createElement('div');
+  div.className = 'slds-p-around_medium';
+  div.innerHTML = `
       <lightning-card title="Accounts">
           <lightning-button
               slot="actions"
@@ -23,5 +23,5 @@ export const basic = () => {
           <span slot="footer">View All</span>
       </lightning-card>
     `;
-    return div;
+  return div;
 };

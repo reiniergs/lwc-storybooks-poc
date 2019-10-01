@@ -5,13 +5,12 @@ module.exports = async ({ config, mode }) => {
   config.plugins.push(
     new LWCWebpackPlugin({
       namespace: {
-        // LWC Namespace with path
-        lightning: path.resolve('./src/lightning'),
-        wrappers: path.resolve('./stories/wrappers')
+        lightning: path.resolve('./src/lightning')
       },
       modules: ['@salesforce-ux/design-system']
     })
   );
+
   config.module.rules = [
     {
       test: /\.stories\.js$/,
