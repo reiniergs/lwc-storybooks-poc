@@ -2,13 +2,14 @@
   "name": "lwc-storybooks-poc",
   "version": "1.0.0",
   "description": "PoC of LWC project using storybooks",
-  "main": "index.js",
-  "author": "Reinier Guerra <reinier.guerra@salesforce.com>",
+  "main": "dist/bundle.js",
+  "author": "Matt Rigdon <mrigdon@salesforce.com>",
   "license": "MIT",
   "devDependencies": {
     "@salesforce-ux/design-system": "^3.0.0-alpha.7",
     "@storybook/html": "^5.2.1",
     "lwc-webpack-plugin": "^0.2.0",
+    "webpack": "^4.41.0",
     "webpack-cli": "^3.3.9"
   },
   "dependencies": {
@@ -17,6 +18,6 @@
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "build": "webpack"
+    "build": "npx webpack"
   }
 }
