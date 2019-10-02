@@ -6,7 +6,6 @@
   "author": "Reinier Guerra <reinier.guerra@salesforce.com>",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.5.5",
     "@lwc/compiler": "^1.0.0",
     "@lwc/engine": "^1.0.0",
     "@storybook/addon-knobs": "^5.1.11",
