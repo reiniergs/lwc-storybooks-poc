@@ -11,8 +11,7 @@
     "lwc-webpack-plugin": "^0.2.0"
   },
   "dependencies": {
-    "@salesforce-ux/design-system": "^3.0.0-alpha.7",
-    "classnames": "^2.2.6"
+    "@salesforce-ux/design-system": "^3.0.0-alpha.7"
   },
   "scripts": {
     "storybook": "start-storybook -p 6006",
