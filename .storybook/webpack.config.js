@@ -13,11 +13,6 @@ module.exports = async ({ config, mode }) => {
 
   config.module.rules = [
     {
-      test: /\.stories\.js$/,
-      loaders: [require.resolve('@storybook/addon-storysource/loader')],
-      enforce: 'pre'
-    },
-    {
       test: /\.(svg|ico|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|cur|ani)(\?.*)?$/,
       loader: 'file-loader/dist/cjs.js',
       query: { name: 'static/media/[name].[hash:8].[ext]' }
