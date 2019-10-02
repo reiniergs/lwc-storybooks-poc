@@ -6,12 +6,12 @@
   "author": "Reinier Guerra <reinier.guerra@salesforce.com>",
   "license": "MIT",
   "devDependencies": {
-    "@lwc/engine": "^1.0.0",
+    "@salesforce-ux/design-system": "^3.0.0-alpha.7",
     "@storybook/html": "^5.2.1",
     "lwc-webpack-plugin": "^0.2.0"
   },
   "dependencies": {
-    "@salesforce-ux/design-system": "^3.0.0-alpha.7"
+    "@lwc/engine": "^1.0.2-222.18"
   },
   "scripts": {
     "storybook": "start-storybook -p 6006",
