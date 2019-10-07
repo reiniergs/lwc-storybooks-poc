@@ -1,7 +1,7 @@
 {
-  "name": "lwc-storybooks-poc",
+  "name": "tbc-frontend",
   "version": "1.0.0",
-  "description": "PoC of LWC project using storybooks",
+  "description": "TBC2 LWC Frontend",
   "main": "dist/bundle.js",
   "author": "Matt Rigdon <mrigdon@salesforce.com>",
   "license": "MIT",
@@ -20,6 +20,6 @@
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "build": "npx webpack"
+    "build": "webpack"
   }
 }
