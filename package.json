@@ -15,7 +15,7 @@
     "webpack-cli": "^3.3.9"
   },
   "dependencies": {
-    "@lwc/engine": "^1.0.2-222.18"
+    "@lwc/engine": "^1.1.0"
   },
   "scripts": {
     "storybook": "start-storybook -p 6006",
