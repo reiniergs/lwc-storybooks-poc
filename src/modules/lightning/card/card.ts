@@ -1,7 +1,7 @@
 import { LightningElement, api } from 'lwc';
 
 export default class LightningCard extends LightningElement {
-    @api title!: string;
+    @api title = '';
 
     renderedCallback() {
         const footerWrapper = this.template.host.querySelector('.slds-card__footer');
