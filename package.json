@@ -7,20 +7,28 @@
   "license": "MIT",
   "devDependencies": {
     "@salesforce-ux/design-system": "^3.0.0-alpha.7",
+    "@salesforce/eslint-config-lwc": "^0.4.0",
     "@storybook/html": "^5.2.1",
+    "@typescript-eslint/eslint-plugin": "^2.3.3",
+    "@typescript-eslint/parser": "^2.3.3",
     "css-loader": "^3.2.0",
+    "eslint": "^6.5.1",
     "file-loader": "^4.2.0",
     "lwc-webpack-plugin": "^0.2.0",
+    "typescript": "^3.6.3",
     "webpack": "^4.41.0",
     "webpack-cli": "^3.3.9"
   },
   "dependencies": {
-    "@lwc/engine": "^1.1.0"
+    "@lwc/engine": "^1.0.2-222.18",
+    "lwc": "^1.1.0"
   },
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "s": "yarn storybook",
     "build-storybook": "build-storybook",
-    "build": "webpack"
+    "build": "webpack",
+    "lint": "npx eslint ./src/**/*.ts",
+    "type-check": "npx tsc --noEmit"
   }
 }
