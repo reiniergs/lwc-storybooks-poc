@@ -11,7 +11,7 @@ module.exports = {
   plugins: [
     new LWCWebpackPlugin({
       namespace: {
-        lightning: path.resolve('./src/lightning')
+        lightning: path.resolve('./src/modules/lightning')
       },
       modules: ['@salesforce-ux/design-system']
     })
