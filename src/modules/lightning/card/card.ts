@@ -18,7 +18,6 @@ export default class LightningCard extends LightningElement {
         }
     }
 
-
     get hasStringTitle() {
         return !!(this.title && typeof this.title === 'string');
     }
