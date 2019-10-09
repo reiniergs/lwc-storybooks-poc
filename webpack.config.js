@@ -8,6 +8,14 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
   },
+  module: {
+    rules: [
+      {
+        test: /^((?!src\/modules).)*\.ts$/,
+        loader: 'ts-loader'
+      }
+    ]
+  },
   plugins: [
     new LWCWebpackPlugin({
       namespace: {
@@ -15,5 +23,8 @@ module.exports = {
       },
       modules: ['@salesforce-ux/design-system']
     })
-  ]
+  ],
+  resolve: {
+    modules: ['node_modules', path.resolve('./src')]
+  }
 };

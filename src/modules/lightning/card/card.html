@@ -11,7 +11,7 @@
           <h2>
             <span class="slds-text-heading_small">
               <template if:true={hasStringTitle}>
-                {title}
+                {capitalizedTitle}
               </template>
               <template if:false={hasStringTitle}>
                 <slot name="title"></slot>

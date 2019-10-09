@@ -1,4 +1,5 @@
-import { buildCustomElementConstructor } from '@lwc/engine';
+import '@lwc/synthetic-shadow';
+import { buildCustomElementConstructor } from 'lwc';
 
 import Card from 'lightning/card';
 
