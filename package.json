@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "@lwc/synthetic-shadow": "^1.1.0",
+    "http-server": "^0.11.1",
     "lodash": "^4.17.15",
     "lwc": "^1.1.0"
   },
@@ -35,6 +36,7 @@
     "build-storybook": "build-storybook",
     "coverage": "open coverage/lcov-report/index.html",
     "format": "prettier --write \"./src/**/*\"",
+    "heroku-postbuild": "[ $CI <> true ] && yarn build || build-storybook",
     "lint": "npx eslint ./src/**/*.{ts,js}",
     "s": "yarn storybook",
     "storybook": "start-storybook -p 6006",

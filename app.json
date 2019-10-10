@@ -1,7 +1,5 @@
 {
-  "addons": [
-
-  ],
+  "addons": [],
   "buildpacks": [
     {
       "url": "heroku/nodejs"
@@ -13,9 +11,11 @@
     }
   },
   "formation": {
+    "web": {
+      "quantity": 1
+    }
   },
   "name": "tbc-frontend",
-  "scripts": {
-  },
+  "scripts": {},
   "stack": "heroku-18"
 }
