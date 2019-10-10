@@ -1,0 +1,21 @@
+{
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "env": {
+    "BUNDLE_GEM__FURY__IO": {
+      "required": true
+    }
+  },
+  "formation": {
+  },
+  "name": "tbc-frontend",
+  "scripts": {
+  },
+  "stack": "heroku-18"
+}
