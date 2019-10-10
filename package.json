@@ -6,9 +6,9 @@
   "author": "Matt Rigdon <mrigdon@salesforce.com>",
   "license": "MIT",
   "devDependencies": {
-    "@salesforce-ux/design-system": "^3.0.0-alpha.7",
     "@salesforce/eslint-config-lwc": "^0.4.0",
     "@storybook/html": "^5.2.1",
+    "@trailhead/styles": "^2.1.1-tds-pr-5080-a.0",
     "@types/jest": "^24.0.18",
     "@types/lodash": "^4.14.142",
     "@typescript-eslint/eslint-plugin": "^2.3.3",

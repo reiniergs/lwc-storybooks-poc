@@ -16,19 +16,19 @@ function buildStoryTag(module: StoryModule, componentClass: any) {
 /**
  * Generates an example story for the given component
  * Auto-generates the story tag based on the component namespace, name, and example
- * For instance, if I have an example story for the lightning/card component called WithoutFooter,
+ * For instance, if I have an example story for the th/card component called WithoutFooter,
  * I call it like this:
  * ```
- * // src/modules/lightning/card/__stories__/card.stories.ts
+ * // src/modules/th/card/__stories__/card.stories.ts
  * export const withoutFooter = () => example(module, WithoutFooter);
  * ```
  * and it will generate a custom tag for the story like this:
  * ```
- * <stories-lightning-card-without-footer>
- *   <lightning-card>
+ * <stories-th-card-without-footer>
+ *   <th-card>
  *     ...
- *   </lightning-card>
- * </stories-lightning-card-without-footer>
+ *   </th-card>
+ * </stories-th-card-without-footer>
  * ```
  */
 export default function example(module: StoryModule, componentClass: any) {

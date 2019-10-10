@@ -1,8 +1,8 @@
 import '@lwc/synthetic-shadow';
 import { buildCustomElementConstructor } from 'lwc';
 
-import Card from 'lightning/card';
+import Card from 'th/card';
 
-const lightningCard = buildCustomElementConstructor(Card);
+const thCard = buildCustomElementConstructor(Card);
 
-customElements.define('lightning-card', lightningCard);
+customElements.define('th-card', thCard);
