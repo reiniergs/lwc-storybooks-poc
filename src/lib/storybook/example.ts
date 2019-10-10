@@ -2,7 +2,11 @@
 import { buildCustomElementConstructor } from 'lwc';
 import kebabCase from 'lodash/kebabCase';
 
-function buildStoryTag(module: NodeModule, componentClass: any) {
+interface StoryModule {
+  id: string;
+}
+
+function buildStoryTag(module: StoryModule, componentClass: any) {
   const relativePath = module.id.split('./src/modules/').join('');
   const [namespaceName, className] = relativePath.split('/');
   const exampleName = kebabCase(componentClass.name);
@@ -27,7 +31,7 @@ function buildStoryTag(module: NodeModule, componentClass: any) {
  * </stories-lightning-card-without-footer>
  * ```
  */
-export default function example(module: NodeModule, componentClass: any) {
+export default function example(module: StoryModule, componentClass: any) {
   const div = document.createElement('div');
   div.className = 'slds-p-around_medium';
 

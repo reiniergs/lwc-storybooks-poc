@@ -4,3 +4,4 @@ build
 storybook-static
 .vscode
 dist
+coverage

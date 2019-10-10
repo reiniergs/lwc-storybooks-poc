@@ -15,10 +15,6 @@ export default class LightningCard extends LightningElement {
     if (!hasFooterContent) {
       if (footerWrapper && footerWrapper.remove) {
         footerWrapper.remove();
-      } else if (footerWrapper && footerWrapper.parentNode) {
-        // IE11 doesn't support remove. https://caniuse.com/#feat=childnode-remove
-        // TODO: remove when lwc can polyfill node.remove.
-        footerWrapper.parentNode.removeChild(footerWrapper);
       }
     }
   }
