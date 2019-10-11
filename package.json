@@ -31,16 +31,16 @@
     "lwc": "^1.1.0"
   },
   "scripts": {
-    "all": "yarn format && yarn type-check && yarn lint && yarn test && yarn build && yarn build-storybook",
+    "test": "yarn type-check && yarn lint && yarn jest && yarn build",
     "build": "webpack",
     "build-storybook": "build-storybook",
     "coverage": "open coverage/lcov-report/index.html",
     "format": "prettier --write \"./src/**/*\"",
-    "heroku-postbuild": "build-storybook",
+    "heroku-postbuild": "[ $CI <> true ] || build-storybook",
     "lint": "npx eslint ./src/**/*.{ts,js}",
     "s": "yarn storybook",
     "storybook": "start-storybook -p 6006",
-    "test": "lwc-services test:unit",
+    "jest": "lwc-services test:unit",
     "type-check": "npx tsc --noEmit"
   }
 }
