@@ -21,15 +21,15 @@
     "webpack-cli": "^3.3.7"
   },
   "dependencies": {
-    "@salesforce-ux/design-system": "3.0.0-alpha-5",
+    "@salesforce-ux/design-system": "2.11.0-beta.1",
     "classnames": "^2.2.6",
     "lwc-webpack-plugin": "davidturissini/lwc-webpack-plugin#pull/1/head"
   },
   "scripts": {
+    "start": "yarn storybook",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "build-plugin": "cd node_modules/lwc-webpack-plugin && yarn build",
-    "hack-slds": "node hack-slds-imports.js",
-    "postinstall": "yarn build-plugin && yarn hack-slds"
+    "postinstall": "yarn build-plugin"
   }
 }
