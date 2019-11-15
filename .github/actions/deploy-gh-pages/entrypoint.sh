@@ -2,7 +2,7 @@
 set -e
 
 yarn install
-yarn build-storybook
+yarn build-storybook -s ./public
 
 REPONAME="$(echo $GITHUB_REPOSITORY | cut -d'/' -f 2)"
 OWNER="$(echo $GITHUB_REPOSITORY | cut -d'/' -f 1)"
