@@ -1,9 +1,8 @@
 import { storiesOf } from '@storybook/html';
-import { buildCustomElementConstructor } from 'lwc';
+import buildAndRegisterCustomElement from './utils/build-custom-element';
 import Card from 'c/card';
 
-const cardCustomElement = buildCustomElementConstructor(Card);
-customElements.define('c-card', cardCustomElement); 
+buildAndRegisterCustomElement('c-card', Card);
 
 storiesOf('Card', module)
     .add('basic', () => `

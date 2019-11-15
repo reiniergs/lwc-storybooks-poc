@@ -1,9 +1,8 @@
 import { storiesOf } from '@storybook/html';
-import { buildCustomElementConstructor } from 'lwc';
+import buildAndRegisterCustomElement from './utils/build-custom-element';
 import Badge from 'c/badge';
 
-const BadgeCustomElement = buildCustomElementConstructor(Badge);
-customElements.define('c-badge', BadgeCustomElement);
+buildAndRegisterCustomElement('c-badge', Badge);
 
 storiesOf('Badge', module)
     .add('default', () => `

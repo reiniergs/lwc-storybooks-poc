@@ -1,9 +1,8 @@
 import { storiesOf } from '@storybook/html';
-import { buildCustomElementConstructor, createElement } from '@lwc/engine';
+import buildAndRegisterCustomElement from './utils/build-custom-element';
 import Button from 'c/button';
 
-const buttonCustomElement = buildCustomElementConstructor(Button);
-customElements.define('c-button', buttonCustomElement); 
+buildAndRegisterCustomElement('c-button', Button);
 
 storiesOf('Button', module)
     .add('base', () => `

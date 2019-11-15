@@ -1,9 +1,8 @@
 import { storiesOf } from '@storybook/html';
-import { buildCustomElementConstructor } from 'lwc';
+import buildAndRegisterCustomElement from './utils/build-custom-element';
 import Avatar from 'c/avatar';
 
-const avatarCustomElement = buildCustomElementConstructor(Avatar);
-customElements.define('c-avatar', avatarCustomElement);
+buildAndRegisterCustomElement('c-avatar', Avatar);
 
 storiesOf('Avatar', module)
     .add('with initials', () => `
@@ -19,7 +18,7 @@ storiesOf('Avatar', module)
     .add('with icon', () => `
         <div class="slds-p-around_medium slds-m-around_x-small slds-box slds-theme_default">
             <c-avatar fallback-icon-name="standard:account"></c-avatar>
-        </div>    
+        </div>
     `)
     .add('variants', () => `
         <div class="slds-p-around_medium slds-m-around_x-small slds-box slds-theme_default">

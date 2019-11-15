@@ -1,9 +1,8 @@
 import { storiesOf } from '@storybook/html';
-import { buildCustomElementConstructor } from 'lwc';
+import buildAndRegisterCustomElement from './utils/build-custom-element';
 import Icon from 'c/icon';
 
-const iconCustomElement = buildCustomElementConstructor(Icon);
-customElements.define('c-icon', iconCustomElement); 
+buildAndRegisterCustomElement('c-icon', Icon);
 
 storiesOf('Icon', module)
     .add('action', () => `
