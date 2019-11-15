@@ -1,23 +1,23 @@
 import { storiesOf } from '@storybook/html';
-import { buildCustomElementConstructor } from '@lwc/engine';
-import Badge from 'lightning/badge';
+import { buildCustomElementConstructor } from 'lwc';
+import Badge from 'c/badge';
 
 const BadgeCustomElement = buildCustomElementConstructor(Badge);
-customElements.define('lightning-badge', BadgeCustomElement)
+customElements.define('c-badge', BadgeCustomElement);
 
 storiesOf('Badge', module)
     .add('default', () => `
         <div class="slds-p-around_medium">
-            <lightning-badge label="Default"><lightning-badge>
+            <c-badge label="Default"><c-badge>
         </div>    
     `)
     .add('inverse', () => `
         <div class="slds-p-around_medium">
-            <lightning-badge variant="inverse" label="Inverse"><lightning-badge>
+            <c-badge variant="inverse" label="Inverse"><c-badge>
         </div>    
     `)
     .add('lightest', () => `
         <div class="slds-p-around_medium">
-            <lightning-badge variant="lightest" label="Lightest"><lightning-badge>
+            <c-badge variant="lightest" label="Lightest"><c-badge>
         </div>    
-    `);
+    `);    

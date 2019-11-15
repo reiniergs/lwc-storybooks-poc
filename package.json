@@ -23,13 +23,11 @@
   "dependencies": {
     "@salesforce-ux/design-system": "2.11.0-beta.1",
     "classnames": "^2.2.6",
-    "lwc-webpack-plugin": "davidturissini/lwc-webpack-plugin#pull/1/head"
+    "lwc-webpack-plugin": "^0.3.0"
   },
   "scripts": {
     "start": "yarn storybook",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "build-plugin": "cd node_modules/lwc-webpack-plugin && yarn build",
-    "postinstall": "yarn build-plugin"
+    "storybook": "start-storybook -s ./public -p 6006",
+    "build-storybook": "build-storybook"
   }
 }

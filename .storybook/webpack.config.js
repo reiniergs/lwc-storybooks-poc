@@ -7,7 +7,7 @@ module.exports = async ({ config, mode }) => {
             namespace: {
                 // LWC Namespace with path
                 lightning: path.resolve('./src/lightning'),
-                wrappers: path.resolve('./stories/wrappers')
+                c: path.resolve('./src/c'),
             },
             modules: [
                 "@salesforce-ux/design-system"

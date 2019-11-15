@@ -5453,9 +5453,10 @@ lru-cache@^5.1.1:
   dependencies:
     yallist "^3.0.2"
 
-lwc-webpack-plugin@davidturissini/lwc-webpack-plugin#pull/1/head:
-  version "0.2.0"
-  resolved "https://codeload.github.com/davidturissini/lwc-webpack-plugin/tar.gz/3e7e3f6b93920ac595d815a8d3cd69fe2cd1f767"
+lwc-webpack-plugin@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/lwc-webpack-plugin/-/lwc-webpack-plugin-0.3.0.tgz#de6e79cc52e022ca66695f8357c3146e48970d58"
+  integrity sha512-Kq8jI7zEyBYGqqIODfzEs19+TRLeWlwLslSEJMyX6oidcnLjY8qMO03vitmhrcujnyzNlIGSJ534g+LYEPy/pg==
   dependencies:
     "@babel/preset-typescript" "^7.3.3"
     "@lwc/babel-plugin-component" "^0.37.4"

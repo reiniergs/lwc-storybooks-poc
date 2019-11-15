@@ -1,0 +1,5 @@
+@import "@salesforce/slds/legacy";
+
+_:-ms-lang(x), svg {
+    pointer-events: none;
+}
